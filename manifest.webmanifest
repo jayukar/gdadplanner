@@ -1,7 +1,7 @@
 {
-  "name": "Setsquare — interior plans in 3D",
-  "short_name": "Setsquare",
-  "description": "Draw interiors to exact measurements, see them in 3D, and issue dimensioned plans.",
+  "name": "GDAD PLANNER",
+  "short_name": "GDAD PLANNER",
+  "description": "better than sketchup",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
