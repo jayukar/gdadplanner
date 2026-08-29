@@ -1,0 +1,36 @@
+Setsquare — installable app bundle
+==================================
+
+This folder is a complete, self-contained web app. Nothing in it reaches
+the internet: the 3D engine, the fonts and the icons are all inside
+index.html or beside it.
+
+To get it onto an iPad home screen
+----------------------------------
+iOS will only "Add to Home Screen" a page served over https, so this
+folder needs a web address. It does not need a server you run — a free
+static host is enough.
+
+ 1. Put this whole folder online. The quickest route is a drag-and-drop
+    host such as Netlify Drop (app.netlify.com/drop): drag the folder
+    onto the page and it gives you an https link. Cloudflare Pages,
+    GitHub Pages and Vercel all work the same way. Keep the files
+    together and keep index.html at the top level.
+ 2. On the iPad, open that link in SAFARI (not Chrome — only Safari can
+    install to the home screen).
+ 3. Tap the Share button, then "Add to Home Screen", then Add.
+
+You now have a Setsquare icon. Tapping it opens the app full screen with
+no browser bars, and after the first launch it works with no internet.
+
+Updating it later
+-----------------
+Replace index.html on the host, then edit sw.js and change
+  const CACHE = "setsquare-v1";
+to v2 (or anything new). The app picks up the new version next launch.
+
+Your plans
+----------
+Plans are saved inside the app on that device. Use Projects to export
+them as .json files if you want a backup or want to move them to
+another device.
